@@ -6,9 +6,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
 # ----------------------------------BEAUTIFULSOUP--------------------------------------
-links = []
-prices= []
-locations = []
+links,prices,locations = [],[],[]
 
 SHEET_URL = "https://forms.gle/zBMqwVJm4zocyrXt9"
 Url = "https://appbrewery.github.io/Zillow-Clone/"
@@ -68,5 +66,6 @@ for n in range(len(links)):
     if n < len(links) - 1:
         another_response =wait.until(ec.element_to_be_clickable((By.LINK_TEXT,"Submit another response")))
         another_response.click()
+driver.quit()
 
 
