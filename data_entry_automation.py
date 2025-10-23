@@ -1,4 +1,3 @@
-import time
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -69,4 +68,5 @@ for n in range(len(links)):
     if n < len(links) - 1:
         another_response =wait.until(ec.element_to_be_clickable((By.LINK_TEXT,"Submit another response")))
         another_response.click()
+
 
